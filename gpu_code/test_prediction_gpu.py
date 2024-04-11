@@ -1,12 +1,13 @@
 from matplotlib import pyplot as plt
 
-from build_weight_and_bias import *
+from build_weight_and_bias_gpu import *
+
 
 def get_predictions(A2):
-    return np.argmax(A2, 0)
+    return cp.argmax(A2, 0)
 
 def get_accuracy(predictions, Y):
-    return np.sum(predictions == Y) / Y.size
+    return cp.sum(predictions == Y) / Y.size
 
 def make_predictions(X, W1, b1, W2, b2):
     _, _, _, A2 = forward_prop(W1, b1, W2, b2, X)
@@ -22,5 +23,5 @@ def test_prediction(index, X, Y, W1, b1, W2, b2):
     
     current_image = current_image.reshape((28, 28)) * 255
     plt.gray()
-    plt.imshow(current_image, interpolation='nearest')
+    plt.imshow(current_image.get(), interpolation='nearest')
     plt.show()

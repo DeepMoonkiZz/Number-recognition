@@ -1,5 +1,5 @@
-from build_weight_and_bias import *
 from load_save_weight_and_bias import *
+from test_prediction import *
 
 def gradient_descent(X, Y, alpha, iterations, type = 'init'):
     W1, b1, W2, b2 = init_params(type)
@@ -9,8 +9,6 @@ def gradient_descent(X, Y, alpha, iterations, type = 'init'):
         W1, b1, W2, b2 = update_params(W1, b1, W2, b2, dW1, db1, dW2, db2, alpha)
         if int(i+1) % 10 == 0 or i == 0:
             print("Iteration: ", i+1)
-            """
             predictions = get_predictions(A2)
             print(get_accuracy(predictions, Y))
-            """
     return W1, b1, W2, b2

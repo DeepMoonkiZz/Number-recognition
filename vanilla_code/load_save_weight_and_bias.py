@@ -11,14 +11,14 @@ def init_params(type = 'init'):
     return W1, b1, W2, b2
 
 def load_params():
-    W1 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/W1.csv", delimiter=",")
-    b1 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/b1.csv", delimiter=",")
-    W2 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/W2.csv", delimiter=",")
-    b2 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/b2.csv", delimiter=",")
+    W1 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/W1.csv", delimiter=",")
+    b1 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/b1.csv", delimiter=",")
+    W2 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/W2.csv", delimiter=",")
+    b2 = np.genfromtxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/b2.csv", delimiter=",")
     return W1, b1.reshape(-1, 1), W2, b2.reshape(-1, 1)
 
 def save_params(W1, b1, W2, b2):
-    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/W1.csv", W1, delimiter=",") 
-    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/b1.csv", b1, delimiter=",") 
-    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/W2.csv", W2, delimiter=",") 
-    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias/b2.csv", b2, delimiter=",")
+    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/W1.csv", W1, delimiter=",") 
+    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/b1.csv", b1, delimiter=",") 
+    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/W2.csv", W2, delimiter=",") 
+    np.savetxt("/home/segal/Documents/Projets_perso/Number-recognition/weight_and_bias_vanilla/b2.csv", b2, delimiter=",")

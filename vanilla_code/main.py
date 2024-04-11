@@ -1,6 +1,6 @@
 import pandas as pd
 
-from test_prediction import *
+from gradient_descent import *
 
 data = pd.read_csv("/home/segal/Documents/Projets_perso/Number-recognition/dataset/train.csv")
 
